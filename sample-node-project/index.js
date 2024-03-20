@@ -6,7 +6,7 @@ const PORT = 3000;
 
 app.get('/', (req, res) => {
     const hostName = os.hostname();
-    const response = `hello from ${hostName}`;
+    const response = `hello from ${hostName} - version 2`;
 
     res.send(response);
 });
