@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-node-project
+spec:
+  selector:
+    matchLabels:
+      app: sample-node-project
+  template:
+    metadata:
+      labels:
+        app: sample-node-project
+    spec:
+      containers:
+      - name: sample-node-project
+        image: pawan1210/sample-node-project:v2.0.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
